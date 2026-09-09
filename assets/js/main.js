@@ -152,25 +152,98 @@
       });
     });
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var ok = obrigatorios.map(validar).every(Boolean);
-      if (!ok) {
-        var bad = $('.is-bad input, .is-bad select', form);
-        if (bad) bad.focus();
-        return;
-      }
-      var btn = $('button[type=submit]', form);
-      btn.disabled = true;
-      btn.textContent = 'Enviando...';
+    /* ===== Formulário -> WhatsApp ===== */
+(function () {
+  var WPP = '5545999999999'; /* somente números, com 55 */
 
-      setTimeout(function () {
-        form.reset();
-        btn.disabled = false;
-        btn.textContent = 'Enviar solicitacao';
-        $('#formOk').hidden = false;
-        setTimeout(function () { $('#formOk').hidden = true; }, 6000);
-      }, 900);
+  var form  = document.getElementById('form');
+  if (!form) return;
+  var okMsg = document.getElementById('formOk');
+
+  var campos = [
+    { id: 'nome',   label: 'Nome',                req: true  },
+    { id: 'fone',   label: 'WhatsApp',            req: true  },
+    { id: 'email',  label: 'E-mail',              req: true  },
+    { id: 'perfil', label: 'Tipo de instalação',  req: true  },
+    { id: 'conta',  label: 'Conta de luz (média)', req: false },
+    { id: 'msg',    label: 'Mensagem',            req: false }
+  ];
+
+  var setErro = function (el, texto) {
+    var box = el.closest('.field');
+    var out = box ? box.querySelector('.err') : null;
+    if (out) out.textContent = texto || '';
+    el.setAttribute('aria-invalid', texto ? 'true' : 'false');
+    if (box) box.classList.toggle('is-err', !!texto);
+  };
+
+  var valida = function () {
+    var ok = true, primeiro = null;
+
+    campos.forEach(function (c) {
+      var el = document.getElementById(c.id);
+      if (!el) return;
+      var v = el.value.trim();
+      var erro = '';
+
+      if (c.req && !v) {
+        erro = 'Campo obrigatório.';
+      } else if (c.id === 'email' && v && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+        erro = 'Informe um e-mail válido.';
+      } else if (c.id === 'fone' && v && v.replace(/\D/g, '').length < 10) {
+        erro = 'Informe o DDD e o número.';
+      } else if (c.id === 'nome' && v && v.split(/\s+/).length < 2) {
+        erro = 'Informe nome e sobrenome.';
+      }
+
+      setErro(el, erro);
+      if (erro) { ok = false; if (!primeiro) primeiro = el; }
     });
-  }
+
+    if (primeiro) primeiro.focus();
+    return ok;
+  };
+
+  /* Remove caracteres que quebram a formatação do WhatsApp */
+  var limpa = function (s) {
+    return s.replace(/[*_~`]/g, '').replace(/\s+/g, ' ').trim();
+  };
+
+  var montaMensagem = function () {
+    var linhas = ['*Solicitação de orçamento*', ''];
+
+    campos.forEach(function (c) {
+      var el = document.getElementById(c.id);
+      if (!el) return;
+      var v = limpa(el.value);
+      if (!v) return;
+      linhas.push('*' + c.label + ':*');
+      linhas.push(v);
+      linhas.push('');
+    });
+
+    linhas.push('*Origem:*');
+    linhas.push('Site M&A Soluções Energéticas');
+
+    return linhas.join('\n');
+  };
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!valida()) return;
+
+    var url = 'https://wa.me/' + WPP + '?text=' + encodeURIComponent(montaMensagem());
+    var aba = window.open(url, '_blank');
+    if (!aba) window.location.href = url; /* fallback se o popup for bloqueado */
+
+    if (okMsg) {
+      okMsg.textContent = 'Abrimos o WhatsApp com seus dados. Toque em enviar para concluir.';
+      okMsg.hidden = false;
+    }
+  });
+
+  /* Limpa o erro ao corrigir */
+  form.addEventListener('input', function (e) {
+    if (e.target.matches('input, select, textarea')) setErro(e.target, '');
+  });
 })();
