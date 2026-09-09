@@ -56,7 +56,9 @@
         <h2>Simulação rápida</h2>
         <label for="sim">Valor médio da conta de luz (R$)</label>
         <input type="number" id="sim" min="150" step="50" placeholder="Ex.: 800" inputmode="numeric">
-        <button class="btn btn--full" id="simBtn" type="button">Calcular economia</button>
+        <button class="btn btn--full" type="submit">Enviar pelo WhatsApp</button>
+        <p class="form__ok" id="formOk" hidden></p>
+        
         <div class="sim__out" id="simOut" hidden>
           <p>Economia estimada em <strong>25 anos</strong></p>
           <p class="sim__val" id="simVal">R$ 0</p>
