@@ -75,7 +75,7 @@
     {
       tags: ['contato', 'telefone', 'whatsapp', 'email', 'e-mail', 'falar com', 'humano', 'atendente', 'vendedor'],
       r: 'Claro. Você pode falar com nosso time agora:<ul>' +
-         '<li><b>WhatsApp</b>: <a href="https://wa.me/' + CFG.wpp + '" target="_blank" rel="noopener">(45) 99999-9999</a></li>' +
+         '<li><b>WhatsApp</b>: <a href="https://wa.me/' + CFG.wpp + '" target="_blank" rel="noopener">(45) 99126-2160</a></li>' +
          '<li><b>E-mail</b>: contato@masolucoesenergeticas.com.br</li>' +
          '<li><b>Horário</b>: seg a sex, 8h às 18h</li></ul>' +
          'Ou preencha o <a href="#contato">formulário de orçamento</a>.'
