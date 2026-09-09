@@ -3,10 +3,10 @@ window.MA = {
   empresa: {
     nome: 'MA Soluções Energéticas',
     legal: 'MA Soluções Energéticas LTDA',
-    tel: '+554599999999',          // ← AJUSTE
-    telFmt: '(45) 9 9999-9999',    // ← AJUSTE
+    tel: '+5545991262160',
+    telFmt: '(45) 99126-2160',
     email: 'contato@masolucoesenergeticas.com.br',
-    rua: 'Av. Brasil, 000',
+    rua: 'Av. Brasil, 3030',
     cidade: 'Medianeira',
     uf: 'PR',
     cep: '85884-000',
@@ -17,7 +17,7 @@ window.MA = {
   },
 
   wa: {
-    numero: '554599999999',        // ← AJUSTE
+    numero: '5545991262160',        // ← AJUSTE
     msg: (cidade) =>
       `Olá! Vi o site e quero um orçamento de energia solar${cidade ? ' em ' + cidade : ''}.`,
     link(cidade) {
