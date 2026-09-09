@@ -1,0 +1,23 @@
+{
+  "name": "MA Soluções Energéticas — Energia Solar no Oeste do Paraná",
+  "short_name": "MA Solar",
+  "description": "Projeto, instalação e homologação de energia solar fotovoltaica em Medianeira e região.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F59E0B",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "utilities"],
+  "icons": [
+    { "src": "/assets/img/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Orçamento no WhatsApp", "url": "/cidades-atendidas", "icons": [{ "src": "/assets/img/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Obras realizadas", "url": "/obras" }
+  ]
+}
