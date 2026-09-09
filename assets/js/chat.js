@@ -24,7 +24,7 @@
     },
     {
       tags: ['economia', 'economizar', 'reduz', 'desconto', 'quanto poupo', 'diminuir conta'],
-      r: 'A redução fica entre <b>85% e 95%</b> da fatura. Permanece apenas a taxa mínima de disponibilidade da Copel (30 kWh monofásico, 50 kWh bifásico, 100 kWh trifásico). Qual o valor da sua conta hoje?'
+      r: 'A redução fica entre <b>75% e 80%</b> da fatura. Permanece apenas a taxa mínima de disponibilidade da Copel (30 kWh monofásico, 50 kWh bifásico, 100 kWh trifásico). Qual o valor da sua conta hoje?'
     },
     {
       tags: ['retorno', 'payback', 'se paga', 'vale a pena', 'quanto tempo pra pagar'],
