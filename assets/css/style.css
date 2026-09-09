@@ -210,3 +210,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   *{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
 }
+.field.is-err input,
+.field.is-err select,
+.field.is-err textarea{border-color:#d64545;background:#fff6f6}
+.field .err{display:block;min-height:1em;color:#d64545;font-size:.76rem;margin-top:4px}
