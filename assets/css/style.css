@@ -214,3 +214,48 @@ button,input,select,textarea{font:inherit;color:inherit}
 .field.is-err select,
 .field.is-err textarea{border-color:#d64545;background:#fff6f6}
 .field .err{display:block;min-height:1em;color:#d64545;font-size:.76rem;margin-top:4px}
+/* Cards com imagem */
+.card--img{
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  overflow:hidden;
+}
+
+.card__fig{
+  margin:0;
+  aspect-ratio:16/10;
+  background:#0d1b2a;
+  overflow:hidden;
+}
+
+.card__fig img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
+
+.card--img:hover .card__fig img{ transform:scale(1.06); }
+
+.card__bd{
+  padding:22px 24px 26px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+/* Ícone sobreposto na borda da imagem */
+.card--img .card__ico{
+  margin-top:-46px;
+  margin-bottom:14px;
+  position:relative;
+  box-shadow:0 8px 22px rgba(0,0,0,.28);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .card__fig img{ transition:none; }
+  .card--img:hover .card__fig img{ transform:none; }
+}
+
