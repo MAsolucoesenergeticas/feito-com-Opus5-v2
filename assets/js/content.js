@@ -1,59 +1,46 @@
-/* Fonte única de verdade. Altere aqui, reflete em todas as páginas. */
-window.MA = {
-  empresa: {
-    nome: 'MA Soluções Energéticas',
-    legal: 'MA Soluções Energéticas LTDA',
-    tel: '+5545991262160',
-    telFmt: '(45) 99126-2160',
-    email: 'contato@masolucoesenergeticas.com.br',
-    rua: 'Av. Brasil, 3030',
-    cidade: 'Medianeira',
-    uf: 'PR',
-    cep: '85884-000',
-    lat: -25.2958,
-    lng: -54.0940,
-    site: 'https://masolucoesenergeticas.com.br',
-    horario: 'Seg–Sex 08:00–18:00 · Sáb 08:00–12:00'
-  },
+/* ==========================================================================
+   M&A SOLUÇÕES ENERGÉTICAS · content.js
+   Fonte única de dados: obras e cidades atendidas.
+   Alterar aqui reflete em todas as páginas.
+   ========================================================================== */
+window.MA = (function () {
+  'use strict';
 
-  wa: {
-    numero: '5545991262160',        // ← AJUSTE
-    msg: (cidade) =>
-      `Olá! Vi o site e quero um orçamento de energia solar${cidade ? ' em ' + cidade : ''}.`,
-    link(cidade) {
-      return `https://wa.me/${this.numero}?text=${encodeURIComponent(this.msg(cidade))}`;
-    }
-  },
+  const WA = '5545991262160';
 
-  cidades: [
-    { s: 'medianeira',        n: 'Medianeira',            lat: -25.2958, lng: -54.0940 },
-    { s: 'missal',            n: 'Missal',                lat: -25.0919, lng: -54.2436 },
-    { s: 'itaipulandia',      n: 'Itaipulândia',          lat: -25.1447, lng: -54.3072 },
-    { s: 'sao-miguel-do-iguacu', n: 'São Miguel do Iguaçu', lat: -25.3486, lng: -54.2381 },
-    { s: 'santa-helena',      n: 'Santa Helena',          lat: -24.8597, lng: -54.3328 },
-    { s: 'serranopolis-do-iguacu', n: 'Serranópolis do Iguaçu', lat: -25.3958, lng: -54.0475 },
-    { s: 'ramilandia',        n: 'Ramilândia',            lat: -25.1178, lng: -54.0292 },
-    { s: 'matelandia',        n: 'Matelândia',            lat: -25.2528, lng: -53.9964 },
-    { s: 'cespar',            n: 'Céu Azul',              lat: -25.1500, lng: -53.8419 },
-    { s: 'foz-do-iguacu',     n: 'Foz do Iguaçu',         lat: -25.5469, lng: -54.5882 },
-    { s: 'cascavel',          n: 'Cascavel',              lat: -24.9555, lng: -53.4552 },
-    { s: 'toledo',            n: 'Toledo',                lat: -24.7250, lng: -53.7431 },
-    { s: 'marechal-candido-rondon', n: 'Marechal Cândido Rondon', lat: -24.5561, lng: -54.0553 },
-    { s: 'sao-jose-das-palmeiras', n: 'São José das Palmeiras', lat: -24.8394, lng: -54.0653 },
-    { s: 'diamante-do-oeste', n: 'Diamante do Oeste',     lat: -24.9425, lng: -54.1044 }
-  ],
+  /* ---------- OBRAS ---------- */
+  /* home: true  → aparece na galeria da página inicial (use 6)
+     ig:          → permalink do post no Instagram, ou null              */
+  const obras = [
+    { img:'assets/img/obras/obra-01.jpg', tipo:'Rural',       titulo:'Aviário 92 kWp',            local:'Missal/PR',                desc:'Estrutura em telhado metálico com 168 módulos e dois inversores trifásicos.', home:true,  ig:'https://www.instagram.com/p/SUBSTITUA/' },
+    { img:'assets/img/obras/obra-02.jpg', tipo:'Residencial', titulo:'Residência 8,4 kWp',        local:'Medianeira/PR',            desc:'Telha cerâmica, 14 módulos, conta reduzida à taxa mínima.',                    home:true,  ig:null },
+    { img:'assets/img/obras/obra-03.jpg', tipo:'Empresarial', titulo:'Distribuidora 46 kWp',      local:'Foz do Iguaçu/PR',         desc:'Galpão comercial com redução de 88% no custo fixo de energia.',                home:true,  ig:null },
+    { img:'assets/img/obras/obra-04.jpg', tipo:'Rural',       titulo:'Irrigação 30 kWp',          local:'Santa Helena/PR',          desc:'Sistema em solo dimensionado para pivô e casa de bombas.',                     home:true,  ig:null },
+    { img:'assets/img/obras/obra-05.jpg', tipo:'Residencial', titulo:'Sobrado 12,6 kWp',          local:'São Miguel do Iguaçu/PR',  desc:'Duas águas com orientações distintas e otimizadores por string.',              home:true,  ig:null },
+    { img:'assets/img/obras/obra-06.jpg', tipo:'Empresarial', titulo:'Frigorífico 120 kWp',       local:'Matelândia/PR',            desc:'Usina de médio porte com monitoramento remoto por planta.',                    home:true,  ig:null },
+    { img:'assets/img/obras/obra-07.jpg', tipo:'Rural',       titulo:'Suinocultura 64 kWp',       local:'Itaipulândia/PR',          desc:'Crédito rural aprovado em 120 meses com carência de 6 meses.',                 home:false, ig:null },
+    { img:'assets/img/obras/obra-08.jpg', tipo:'Residencial', titulo:'Residência 5,6 kWp',        local:'Serranópolis do Iguaçu/PR',desc:'Instalação concluída em um único dia útil.',                                   home:false, ig:null },
+    { img:'assets/img/obras/obra-09.jpg', tipo:'Empresarial', titulo:'Supermercado 78 kWp',       local:'Cascavel/PR',              desc:'Compensação remota entre duas unidades consumidoras.',                         home:false, ig:null }
+  ];
 
-  servicos: [
-    { s: '',                       t: 'Energia Solar' },
-    { s: 'preco-',                 t: 'Preço e Orçamento' },
-    { s: 'residencial-',           t: 'Residencial' },
-    { s: 'empresa-',               t: 'Empresarial' },
-    { s: 'rural-',                 t: 'Rural e Agronegócio' }
-  ],
+  /* ---------- CIDADES ---------- */
+  const cidades = [
+    { nome:'Medianeira',               slug:'energia-solar-medianeira',                uf:'PR', tag:'Sede',     desc:'Nossa base. Atendimento no mesmo dia e visita técnica sem custo.' },
+    { nome:'Missal',                   slug:'energia-solar-missal',                    uf:'PR', tag:'18 km',    desc:'Forte atuação em aviários e propriedades rurais.' },
+    { nome:'Itaipulândia',             slug:'energia-solar-itaipulandia',              uf:'PR', tag:'32 km',    desc:'Projetos residenciais e de suinocultura homologados na Copel.' },
+    { nome:'Serranópolis do Iguaçu',   slug:'energia-solar-serranopolis-do-iguacu',    uf:'PR', tag:'26 km',    desc:'Sistemas em solo e telhado para pequenas propriedades.' },
+    { nome:'São Miguel do Iguaçu',     slug:'energia-solar-sao-miguel-do-iguacu',      uf:'PR', tag:'28 km',    desc:'Residencial, comércio e irrigação com payback de 3 a 4 anos.' },
+    { nome:'Matelândia',               slug:'energia-solar-matelandia',                uf:'PR', tag:'22 km',    desc:'Indústria e agro, incluindo usinas acima de 100 kWp.' },
+    { nome:'Ramilândia',               slug:'energia-solar-ramilandia',                uf:'PR', tag:'38 km',    desc:'Atendimento rural com estrutura em solo.' },
+    { nome:'Céu Azul',                 slug:'energia-solar-ceu-azul',                  uf:'PR', tag:'42 km',    desc:'Projetos residenciais e para o setor de serviços.' },
+    { nome:'Santa Helena',             slug:'energia-solar-santa-helena',              uf:'PR', tag:'58 km',    desc:'Irrigação, secadores e granjas de grande consumo.' },
+    { nome:'São José das Palmeiras',   slug:'energia-solar-sao-jose-das-palmeiras',    uf:'PR', tag:'62 km',    desc:'Sistemas compactos com o melhor custo por kWp.' },
+    { nome:'Diamante do Oeste',        slug:'energia-solar-diamante-do-oeste',         uf:'PR', tag:'56 km',    desc:'Residencial e rural com crédito facilitado.' },
+    { nome:'Foz do Iguaçu',            slug:'energia-solar-foz-do-iguacu',             uf:'PR', tag:'68 km',    desc:'Hotelaria, comércio e residências de alto consumo.' },
+    { nome:'Marechal Cândido Rondon',  slug:'energia-solar-marechal-candido-rondon',   uf:'PR', tag:'88 km',    desc:'Agroindústria e aviários com projeto dedicado.' },
+    { nome:'Toledo',                   slug:'energia-solar-toledo',                    uf:'PR', tag:'96 km',    desc:'Indústria e comércio, com análise de demanda contratada.' },
+    { nome:'Cascavel',                 slug:'energia-solar-cascavel',                  uf:'PR', tag:'118 km',   desc:'Usinas empresariais e compensação entre unidades.' }
+  ];
 
-  /* 12 fotos fixas usadas nas 135 páginas */
-  obras: Array.from({ length: 12 }, (_, i) => {
-    const n = String(i + 1).padStart(2, '0');
-    return { src: `assets/img/obras/aviario-${n}.webp`, alt: `Instalação de energia solar em aviário — obra ${n}` };
-  })
-};
+  return { WA, obras, cidades };
+})();
