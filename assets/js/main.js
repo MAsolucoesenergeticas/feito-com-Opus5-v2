@@ -120,53 +120,21 @@
     });
   }
 
-  /* Validacao do formulario */
+  /* ===== Formulario -> WhatsApp ===== */
+  var WPP = '5545999999999'; /* somente numeros, com 55 */
+
   var form = $('#form');
-  if (form) {
-    var setErr = function (input, msg) {
-      var field = input.closest('.field');
-      var slot = $('.err', field);
-      field.classList.toggle('is-bad', !!msg);
-      if (slot) slot.textContent = msg || '';
-      return !msg;
-    };
-
-    var validar = function (input) {
-      var v = input.value.trim();
-      if (!v) return setErr(input, 'Campo obrigatorio.');
-      if (input.id === 'nome' && v.length < 3) return setErr(input, 'Informe o nome completo.');
-      if (input.id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
-        return setErr(input, 'E-mail invalido.');
-      }
-      if (input.id === 'fone' && v.replace(/\D/g, '').length < 10) {
-        return setErr(input, 'Telefone incompleto.');
-      }
-      return setErr(input, '');
-    };
-
-    var obrigatorios = $$('[required]', form);
-    obrigatorios.forEach(function (i) {
-      i.addEventListener('blur', function () { validar(i); });
-      i.addEventListener('input', function () {
-        if (i.closest('.field').classList.contains('is-bad')) validar(i);
-      });
-    });
-
-    /* ===== Formulário -> WhatsApp ===== */
-(function () {
-  var WPP = '5545999999999'; /* somente números, com 55 */
-
-  var form  = document.getElementById('form');
   if (!form) return;
+
   var okMsg = document.getElementById('formOk');
 
   var campos = [
-    { id: 'nome',   label: 'Nome',                req: true  },
-    { id: 'fone',   label: 'WhatsApp',            req: true  },
-    { id: 'email',  label: 'E-mail',              req: true  },
-    { id: 'perfil', label: 'Tipo de instalação',  req: true  },
+    { id: 'nome',   label: 'Nome',                 req: true },
+    { id: 'fone',   label: 'WhatsApp',             req: true },
+    { id: 'email',  label: 'E-mail',               req: false, sempre: true },
+    { id: 'perfil', label: 'Tipo de instalação',   req: true },
     { id: 'conta',  label: 'Conta de luz (média)', req: false },
-    { id: 'msg',    label: 'Mensagem',            req: false }
+    { id: 'msg',    label: 'Mensagem',             req: false }
   ];
 
   var setErro = function (el, texto) {
@@ -174,7 +142,10 @@
     var out = box ? box.querySelector('.err') : null;
     if (out) out.textContent = texto || '';
     el.setAttribute('aria-invalid', texto ? 'true' : 'false');
-    if (box) box.classList.toggle('is-err', !!texto);
+    if (box) {
+      box.classList.toggle('is-err', !!texto);
+      box.classList.toggle('is-bad', !!texto);
+    }
   };
 
   var valida = function () {
@@ -204,9 +175,9 @@
     return ok;
   };
 
-  /* Remove caracteres que quebram a formatação do WhatsApp */
+  /* Remove caracteres que quebram a formatacao do WhatsApp */
   var limpa = function (s) {
-    return s.replace(/[*_~`]/g, '').replace(/\s+/g, ' ').trim();
+    return String(s || '').replace(/[*_~`]/g, '').replace(/\s+/g, ' ').trim();
   };
 
   var montaMensagem = function () {
@@ -216,9 +187,10 @@
       var el = document.getElementById(c.id);
       if (!el) return;
       var v = limpa(el.value);
-      if (!v) return;
+      if (!v && !c.sempre) return;
+
       linhas.push('*' + c.label + ':*');
-      linhas.push(v);
+      linhas.push(v || 'vazio');
       linhas.push('');
     });
 
