@@ -34,22 +34,43 @@
     });
   }
 
-  /* Simulador de economia */
+  /* Simulador de economia + WhatsApp */
+  var WPP = '5545991262160';
+
   var simBtn = $('#simBtn');
   if (simBtn) {
     simBtn.addEventListener('click', function () {
       var v = parseFloat($('#sim').value);
       if (!v || v < 50) {
-        alert('Informe um valor valido (minimo R$ 50).');
+        alert('Informe um valor válido (mínimo R$ 50).');
+        $('#sim').focus();
         return;
       }
-      var total = v * 0.9 * 12 * 25;
-      $('#simVal').textContent = total.toLocaleString('pt-BR', {
-        style: 'currency', currency: 'BRL', maximumFractionDigits: 0
-      });
+
+      var brl = function (n) {
+        return n.toLocaleString('pt-BR', {
+          style: 'currency', currency: 'BRL', maximumFractionDigits: 0
+        });
+      };
+
+      $('#simVal').textContent = brl(v * 0.9 * 12 * 25);
       $('#simOut').hidden = false;
+
+      var texto = 'Olá, estou vindo do site, minha conta de luz de valor '
+                + brl(v) + ', colocando as placas quanto posso economizar?';
+
+      var url = 'https://wa.me/' + WPP + '?text=' + encodeURIComponent(texto);
+      var aba = window.open(url, '_blank');
+      if (!aba) window.location.href = url;
+
+      var ok = $('#simOk');
+      if (ok) {
+        ok.textContent = 'Abrimos o WhatsApp. Toque em enviar para concluir.';
+        ok.hidden = false;
+      }
     });
   }
+
 
   /* Contadores */
   var stats = $$('.stats b[data-count]');
