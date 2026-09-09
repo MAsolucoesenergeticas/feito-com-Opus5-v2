@@ -4,7 +4,7 @@
 
   var CFG = {
     nome: 'Magnum',
-    wpp: '5545999999999',
+    wpp: '554591262160',
     /* Deixe endpoint vazio para operar 100% local.
        Preencha com sua URL de backend para usar LLM. */
     endpoint: '',
