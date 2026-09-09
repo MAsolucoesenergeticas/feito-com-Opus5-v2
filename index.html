@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Energia Solar em Medianeira e Região | MA Soluções Energéticas</title>
-<meta name="description" content="Projeto, instalação e homologação de energia solar fotovoltaica em Medianeira, Missal, Foz do Iguaçu e todo o Oeste do Paraná. Economize até 95% na conta de luz. Orçamento grátis.">
+<title>Energia Solar em Medianeira e Região | M&amp;A Soluções Energéticas</title>
+<meta name="description" content="Projeto, instalação e homologação de energia solar fotovoltaica em Medianeira, Missal, Foz do Iguaçu e todo o Oeste do Paraná. Economize até 95% na conta de luz. Orçamento grátis pelo WhatsApp.">
 <link rel="canonical" href="https://masolucoesenergeticas.com.br/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="geo.region" content="BR-PR">
@@ -13,8 +13,8 @@
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="MA Soluções Energéticas">
-<meta property="og:title" content="Energia Solar em Medianeira e Região | MA Soluções Energéticas">
+<meta property="og:site_name" content="M&amp;A Soluções Energéticas">
+<meta property="og:title" content="Energia Solar em Medianeira e Região | M&amp;A Soluções Energéticas">
 <meta property="og:description" content="Reduza até 95% da sua conta de luz com energia solar. Atendemos Medianeira e todo o Oeste do Paraná.">
 <meta property="og:url" content="https://masolucoesenergeticas.com.br/">
 <meta property="og:image" content="https://masolucoesenergeticas.com.br/assets/img/og-default.webp">
@@ -23,43 +23,65 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#08203A" media="(prefers-color-scheme:light)">
-<meta name="theme-color" content="#060E1A" media="(prefers-color-scheme:dark)">
-
-<!-- tema antes da pintura: evita flash -->
-<script>
-(function(){try{var t=localStorage.getItem('ma-theme');
-document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
-}catch(e){document.documentElement.dataset.theme='light'}})();
-</script>
+<meta name="theme-color" content="#08203A">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/css/style.css">
 
+<!-- tema antes da pintura: evita flash branco no dark -->
+<script>
+(function(){try{var t=localStorage.getItem('ma-theme');
+if(!t)t=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ElectricalContractor",
-"@id":"https://masolucoesenergeticas.com.br/#business",
-"name":"MA Soluções Energéticas","url":"https://masolucoesenergeticas.com.br/",
-"image":"https://masolucoesenergeticas.com.br/assets/img/og-default.webp",
-"telephone":"+5545991262160","email":"contato@masolucoesenergeticas.com.br","priceRange":"$$",
-"address":{"@type":"PostalAddress","streetAddress":"Av. Brasil, 000","addressLocality":"Medianeira","addressRegion":"PR","postalCode":"85884-000","addressCountry":"BR"},
-"geo":{"@type":"GeoCoordinates","latitude":-25.2958,"longitude":-54.0940},
-"openingHoursSpecification":[
-{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
-{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],
-"areaServed":[{"@type":"City","name":"Medianeira"},{"@type":"City","name":"Missal"},{"@type":"City","name":"Itaipulândia"},{"@type":"City","name":"São Miguel do Iguaçu"},{"@type":"City","name":"Santa Helena"},{"@type":"City","name":"Serranópolis do Iguaçu"},{"@type":"City","name":"Ramilândia"},{"@type":"City","name":"Matelândia"},{"@type":"City","name":"Céu Azul"},{"@type":"City","name":"Foz do Iguaçu"},{"@type":"City","name":"Cascavel"},{"@type":"City","name":"Toledo"},{"@type":"City","name":"Marechal Cândido Rondon"},{"@type":"City","name":"São José das Palmeiras"},{"@type":"City","name":"Diamante do Oeste"}]}
+{
+  "@context":"https://schema.org","@type":"ElectricalContractor",
+  "@id":"https://masolucoesenergeticas.com.br/#business",
+  "name":"M&A Soluções Energéticas",
+  "image":"https://masolucoesenergeticas.com.br/assets/img/og-default.webp",
+  "url":"https://masolucoesenergeticas.com.br/",
+  "telephone":"+5545991262160",
+  "email":"contato@masolucoesenergeticas.com.br",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Av. Brasil, 000","addressLocality":"Medianeira","addressRegion":"PR","postalCode":"85884-000","addressCountry":"BR"},
+  "geo":{"@type":"GeoCoordinates","latitude":-25.2958,"longitude":-54.0940},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],
+  "areaServed":[
+    {"@type":"City","name":"Medianeira"},{"@type":"City","name":"Missal"},
+    {"@type":"City","name":"Itaipulândia"},{"@type":"City","name":"São Miguel do Iguaçu"},
+    {"@type":"City","name":"Santa Helena"},{"@type":"City","name":"Serranópolis do Iguaçu"},
+    {"@type":"City","name":"Ramilândia"},{"@type":"City","name":"Matelândia"},
+    {"@type":"City","name":"Céu Azul"},{"@type":"City","name":"Foz do Iguaçu"},
+    {"@type":"City","name":"Cascavel"},{"@type":"City","name":"Toledo"},
+    {"@type":"City","name":"Marechal Cândido Rondon"},
+    {"@type":"City","name":"São José das Palmeiras"},
+    {"@type":"City","name":"Diamante do Oeste"}],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"87"}
+}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite",
+"url":"https://masolucoesenergeticas.com.br/","name":"M&A Soluções Energéticas",
+"inLanguage":"pt-BR","publisher":{"@id":"https://masolucoesenergeticas.com.br/#business"}}
 </script>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Quanto custa um sistema de energia solar?","acceptedAnswer":{"@type":"Answer","text":"O investimento depende do consumo mensal. Sistemas residenciais na região partem de aproximadamente R$ 14.000 para consumos de 250 kWh/mês. O orçamento é gratuito e feito após análise da sua conta de luz."}},
+{"@type":"Question","name":"Quanto custa um sistema de energia solar em Medianeira?","acceptedAnswer":{"@type":"Answer","text":"O investimento depende do consumo mensal. Sistemas residenciais na região partem de aproximadamente R$ 14.000 para consumos de 250 kWh/mês. O orçamento é gratuito e feito após análise da sua conta de luz."}},
 {"@type":"Question","name":"Em quanto tempo o investimento se paga?","acceptedAnswer":{"@type":"Answer","text":"No Oeste do Paraná o retorno médio ocorre entre 3 e 5 anos, considerando a alta incidência solar da região e as tarifas da Copel."}},
-{"@type":"Question","name":"A energia solar funciona em dias nublados?","acceptedAnswer":{"@type":"Answer","text":"Sim. A geração cai proporcionalmente à luminosidade, mas o sistema continua produzindo. O dimensionamento já considera a média anual."}},
-{"@type":"Question","name":"Vocês cuidam da homologação junto à Copel?","acceptedAnswer":{"@type":"Answer","text":"Sim. Fazemos projeto elétrico, protocolo, acompanhamento do parecer de acesso e vistoria final, sem custo adicional."}},
-{"@type":"Question","name":"Existe financiamento para energia solar?","acceptedAnswer":{"@type":"Answer","text":"Sim. Linhas de crédito de bancos e cooperativas, prazos de até 120 meses e carência. Em muitos casos a parcela é menor que a conta de luz atual."}},
-{"@type":"Question","name":"Qual a vida útil dos painéis solares?","acceptedAnswer":{"@type":"Answer","text":"Módulos com vida útil acima de 25 anos, garantia de performance de 25 anos e de produto de 12 a 15 anos. Inversores: 10 a 12 anos."}}]}
+{"@type":"Question","name":"A energia solar funciona em dias nublados?","acceptedAnswer":{"@type":"Answer","text":"Sim. A geração cai proporcionalmente à luminosidade, mas o sistema continua produzindo. O dimensionamento já considera a média anual, incluindo dias nublados."}},
+{"@type":"Question","name":"Vocês cuidam da homologação junto à Copel?","acceptedAnswer":{"@type":"Answer","text":"Sim. Realizamos o projeto elétrico, o protocolo, o acompanhamento do parecer de acesso e a vistoria final junto à concessionária, sem custo adicional."}},
+{"@type":"Question","name":"Existe financiamento para energia solar?","acceptedAnswer":{"@type":"Answer","text":"Sim. Trabalhamos com linhas de crédito de bancos e cooperativas, com prazos de até 120 meses e carência. Em muitos casos a parcela é menor que a conta de luz atual."}},
+{"@type":"Question","name":"Qual a vida útil dos painéis solares?","acceptedAnswer":{"@type":"Answer","text":"Os módulos têm vida útil superior a 25 anos, com garantia de performance de 25 anos e garantia de produto de 12 a 15 anos. Os inversores têm garantia de 10 a 12 anos."}}
+]}
 </script>
 </head>
 
@@ -67,69 +89,536 @@ document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dar
 
 <a href="#main" class="sr">Ir para o conteúdo</a>
 
-<!-- sprite -->
+<!-- ============ SPRITE SVG ============ -->
 <svg class="svg-sprite" aria-hidden="true" focusable="false">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.12-.41-2.13-1.31-.79-.7-1.32-1.57-1.47-1.87-.15-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.55 2.99 1.2 3.29 1 3.88.95.59-.05 1.9-.78 2.17-1.53.27-.75.27-1.4.2-1.53-.07-.13-.27-.2-.57-.35zM12 22a9.9 9.9 0 0 1-5.05-1.38L3 22l1.42-3.86A9.9 9.9 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></symbol>
-  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></symbol>
-  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24">
+    <path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.9-.94 1.09-.17.19-.35.2-.64.07-.3-.15-1.13-.42-2.15-1.33-.8-.71-1.33-1.59-1.49-1.89-.15-.3-.02-.46.13-.61.15-.15.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.35 2.97 1.16 2.97.77 3.51.72.54-.05 1.75-.71 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.19-.57-.34z"/>
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.04-.19-.31a8.19 8.19 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.23 3.7 8.23 8.24s-3.69 8.24-8.27 8.24z"/>
+  </symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24">
+    <path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-1-13h2v3h-2V2zm0 17h2v3h-2v-3zM2 11h3v2H2v-2zm17 0h3v2h-3v-2zM4.22 5.64l1.42-1.42 2.12 2.12-1.41 1.42-2.13-2.12zm11.02 11.02 1.42-1.41 2.12 2.12-1.41 1.41-2.13-2.12zM4.22 18.36l2.13-2.12 1.41 1.41-2.12 2.12-1.42-1.41zm11.02-11.02 2.13-2.12 1.41 1.42-2.12 2.12-1.42-1.42z"/>
+  </symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24">
+    <path d="M12.3 22c-5.52 0-10-4.48-10-10 0-4.76 3.33-8.74 7.79-9.75.4-.09.78.28.66.67A7.5 7.5 0 0 0 20.4 13.9c.4-.1.77.28.66.67C19.94 19.02 16.42 22 12.3 22z"/>
+  </symbol>
 </svg>
 
-<!-- ==================== TOPBAR ==================== -->
+<!-- ============ TOPBAR ============ -->
 <div class="topbar">
   <div class="container">
-    <span>⚡ Medianeira/PR · Atendemos todo o Oeste do Paraná · Seg–Sex 08:00–18:00 · Sáb 08:00–12:00</span>
-    <span>Orçamento grátis: <a href="tel:+5545991262160">(45) 99126-2160</a></span>
+    <span>☀ Medianeira · PR — atendemos todo o Oeste do Paraná</span>
+    <span>Seg–Sex 08:00–18:00 · Sáb 08:00–12:00 · <a href="tel:+5545991262160">(45) 99126-2160</a></span>
   </div>
 </div>
 
-<!-- ==================== HEADER ==================== -->
+<!-- ============ HEADER ============ -->
 <header>
   <nav class="nav" aria-label="Menu principal">
-    <a href="/" class="logo">MA Soluções<em>Energéticas · Medianeira/PR</em></a>
+    <a href="/" class="logo" aria-label="M&amp;A Soluções Energéticas — página inicial">
+      M&amp;A Soluções <em>ENERGIA SOLAR FOTOVOLTAICA</em>
+    </a>
 
     <ul class="menu" id="menu">
       <li><a href="/" class="is-active">Início</a></li>
       <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#equipamentos">Equipamentos</a></li>
       <li><a href="#etapas">Como funciona</a></li>
+      <li><a href="#obras">Obras</a></li>
       <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="#cidades">Cidades</a></li>
+      <li><a href="/cidades-atendidas">Cidades</a></li>
       <li><a href="#faq">Dúvidas</a></li>
+      <li><a href="#contato">Contato</a></li>
       <li class="mobile-cta">
         <a class="btn-wa wa-block" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
-          <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg>Orçamento grátis
+          <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Orçamento grátis
         </a>
       </li>
     </ul>
 
-    <div class="nav-tools">
-      <button class="theme-btn" id="themeBtn" type="button" aria-label="Alternar tema claro e escuro">
-        <svg class="i-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
-        <svg class="i-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
-      </button>
-      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
-      </button>
-      <a class="btn-wa nav-cta" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
-        <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg>Orçamento grátis
-      </a>
-    </div>
+    <button class="theme-btn" data-theme-btn type="button" aria-label="Alternar tema claro e escuro">
+      <svg class="ico-theme ico-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+      <svg class="ico-theme ico-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+    </button>
+
+    <a class="btn-wa nav-cta" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+      <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Orçamento grátis
+    </a>
+
+    <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
-<div class="overlay" id="overlay" aria-hidden="true"></div>
+<div class="overlay" hidden></div>
 
 <main id="main">
 
-<!-- ==================== HERO ==================== -->
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-bg"><img src="assets/img/hero.jpg" alt="Instalação de painéis solares em telhado no Oeste do Paraná" width="1920" height="1080" fetchpriority="high"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <span class="eyebrow">Energia solar fotovoltaica · Oeste do Paraná</span>
-      <h1>Reduza até <span>95%</span> da sua conta de luz em Medianeira e região</h1>
-      <p>Projeto, instalação e homologação completa junto à Copel. Equipe própria, equipamentos Tier 1 com garantia de 25 anos e retorno do investimento em 3 a 5 anos.</p>
+  <div class="hero-bg">
+    <img src="assets/img/hero-solar.jpg" alt="Sistema de energia solar fotovoltaica instalado em telhado no Oeste do Paraná" width="1920" height="1080" loading="eager" fetchpriority="high">
+  </div>
+  <div class="container hero-inner">
+    <span class="eyebrow">Medianeira · Oeste do Paraná</span>
+    <h1>Energia solar com até <span>95% de economia</span> na sua conta de luz</h1>
+    <p>Projeto, instalação e homologação completa junto à Copel. Equipe própria, equipamentos Tier 1 com garantia de 25 anos e retorno do investimento em 3 a 5 anos.</p>
 
-      <div class="hero-actions">
-        <a class="btn-wa wa-lg"
-$$
+    <div class="hero-actions">
+      <a class="btn-wa wa-lg" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+        <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Pedir orçamento no WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="tel:+5545991262160">📞 (45) 99126-2160</a>
+    </div>
+    <span class="wa-hint">Envie uma foto da sua conta de luz · resposta em até 24 horas · sem compromisso</span>
+  </div>
+</section>
+
+<!-- ============ ESTATÍSTICAS ============ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><b><span data-count="380" data-suf="+">380+</span></b><span>Sistemas instalados</span></div>
+      <div class="stat"><b><span data-count="6.4" data-suf=" MW">6,4 MW</span></b><span>Potência entregue</span></div>
+      <div class="stat"><b><span data-count="15">15</span></b><span>Cidades atendidas</span></div>
+      <div class="stat"><b><span data-count="25" data-suf=" anos">25 anos</span></b><span>Garantia dos módulos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section>
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Quem somos</span>
+      <h2>Instalação própria, nunca terceirizada</h2>
+      <p>A maior causa de falha em sistemas fotovoltaicos não é o equipamento — é a instalação. Por isso a M&amp;A não terceiriza nenhuma etapa técnica: o mesmo time que dimensiona é o que sobe no telhado.</p>
+      <p>Somos de Medianeira e atendemos num raio de 120 km, com pós-venda feito por técnico local — não por central de atendimento em outro estado.</p>
+
+      <div class="wa-card">
+        <h4>Quer saber quanto você economizaria?</h4>
+        <p>Mande sua conta de luz pelo WhatsApp. Devolvemos o dimensionamento, o valor fechado e a projeção de economia dos próximos 25 anos.</p>
+        <a class="btn-wa" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+          <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Enviar minha conta de luz
+        </a>
+      </div>
+    </div>
+
+    <div class="figure">
+      <img src="assets/img/equipe.jpg" alt="Equipe técnica da M&amp;A Soluções Energéticas instalando módulos fotovoltaicos" width="800" height="1000" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="bg-light" id="servicos">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Nossos serviços</span>
+      <h2>Soluções fotovoltaicas para cada perfil de consumo</h2>
+      <p class="lead">Do telhado residencial ao aviário de grande porte, dimensionamos o sistema exato para o seu consumo.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-img"><img src="assets/img/servico-residencial.jpg" alt="Painéis solares instalados no telhado de uma residência em Medianeira" width="800" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Energia Solar Residencial</h3>
+          <p>Sistemas de 2 a 15 kWp para casas e sobrados. Instalação limpa, sem quebra-quebra, concluída em 1 a 3 dias. Economia já na primeira fatura.</p>
+          <a class="more" href="/energia-solar-residencial-medianeira">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/img/servico-empresarial.jpg" alt="Usina fotovoltaica no telhado de um galpão comercial" width="800" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Energia Solar Empresarial</h3>
+          <p>Comércios, indústrias e prestadores de serviço. Análise de demanda contratada, redução direta no custo fixo e payback de 2 a 4 anos.</p>
+          <a class="more" href="/energia-solar-empresa-medianeira">Ver detalhes →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/img/servico-rural.jpg" alt="Sistema fotovoltaico em aviário no interior do Oeste do Paraná" width="800" height="500" loading="lazy" decoding="async"></div>
+        <div class="card-body">
+          <h3>Energia Solar Rural</h3>
+          <p>Aviários, suinocultura, irrigação e secadores. Estrutura em solo ou telhado metálico, com acesso a crédito rural de juros reduzidos.</p>
+          <a class="more" href="/energia-solar-rural-medianeira">Ver detalhes →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAIXA WHATSAPP ============ -->
+<section class="wa-strip">
+  <div class="container">
+    <div>
+      <h3>Sua conta de luz passou de R$ 400?</h3>
+      <p>Então a energia solar já compensa. Descubra em 5 minutos quanto você deixaria de pagar todos os meses.</p>
+    </div>
+    <a class="btn-wa wa-lg" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+      <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Calcular minha economia
+    </a>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section>
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Por que a M&amp;A</span>
+      <h2>O que está incluso em todo projeto</h2>
+    </div>
+
+    <div class="eq">
+      <div><span class="num">01</span><h4>Projeto com ART no CREA-PR</h4><p>Projeto elétrico assinado por engenheiro e ART registrada. Sem isso, o sistema não é homologado.</p></div>
+      <div><span class="num">02</span><h4>Homologação na Copel</h4><p>Protocolo, parecer de acesso e vistoria final acompanhados por nós, sem custo adicional.</p></div>
+      <div><span class="num">03</span><h4>Equipamentos Tier 1</h4><p>Módulos e inversores com garantia real no Brasil e assistência técnica ativa.</p></div>
+      <div><span class="num">04</span><h4>Equipe com NR-10 e NR-35</h4><p>Time fixo, treinado e certificado para trabalho em altura e em instalações elétricas.</p></div>
+      <div><span class="num">05</span><h4>Monitoramento remoto</h4><p>Acompanhe a geração pelo celular. Se cair, nós identificamos antes de você.</p></div>
+      <div><span class="num">06</span><h4>Contrato por escrito</h4><p>Escopo, prazo e valor definidos em contrato. Nada de surpresa depois da assinatura.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ETAPAS ============ -->
+<section class="bg-light" id="etapas">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Passo a passo</span>
+      <h2>Da sua conta de luz ao sistema gerando</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step"><b>ETAPA 01</b><h4>Análise</h4><p>Você envia a conta de luz. Calculamos o consumo médio e a potência necessária.</p></div>
+      <div class="step"><b>ETAPA 02</b><h4>Proposta</h4><p>Visita técnica, orçamento fechado e projeção de economia mês a mês.</p></div>
+      <div class="step"><b>ETAPA 03</b><h4>Projeto</h4><p>Projeto elétrico e protocolo do pedido de acesso junto à Copel.</p></div>
+      <div class="step"><b>ETAPA 04</b><h4>Instalação</h4><p>Montagem por equipe própria, vistoria da concessionária e sistema ligado.</p></div>
+    </div>
+
+    <div class="center-cta">
+      <a class="btn-wa wa-lg" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+        <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Começar pela etapa 01
+      </a>
+      <span class="wa-hint">Leva menos de 1 minuto para mandar sua conta</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OBRAS ============ -->
+<section id="obras">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Obras realizadas</span>
+      <h2>Projetos entregues no Oeste do Paraná</h2>
+      <p class="lead">Instalações reais executadas pela nossa equipe em propriedades rurais, residências e empresas da região.</p>
+    </div>
+
+    <div class="cards" id="gal-home"></div>
+
+    <div class="center-cta"><a class="btn btn-ghost" href="/obras" style="border-color:var(--line);color:var(--dark)">Ver galeria completa</a></div>
+  </div>
+</section>
+
+<!-- ============ COMPARATIVO ============ -->
+<section class="bg-light">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Comparativo</span>
+      <h2>M&amp;A x instalador avulso</h2>
+    </div>
+
+    <div class="tab-wrap">
+      <table class="tab-cmp">
+        <caption class="sr">Comparação entre a M&amp;A Soluções Energéticas e instaladores avulsos</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col">M&amp;A Soluções</th><th scope="col">Instalador avulso</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Projeto com ART no CREA-PR</th><td class="sim">Sim, incluso</td><td class="nao">Cobrado à parte</td></tr>
+          <tr><th scope="row">Homologação na Copel</th><td class="sim">Sim, do início ao fim</td><td class="nao">Por conta do cliente</td></tr>
+          <tr><th scope="row">Equipe própria certificada</th><td class="sim">NR-10 e NR-35</td><td class="nao">Terceirizada</td></tr>
+          <tr><th scope="row">Contrato com prazo definido</th><td class="sim">Sim</td><td class="nao">Acordo verbal</td></tr>
+          <tr><th scope="row">Monitoramento de geração</th><td class="sim">Incluso</td><td class="nao">Não oferecido</td></tr>
+          <tr><th scope="row">Pós-venda local</th><td class="sim">Técnico na região</td><td class="nao">Sem garantia de retorno</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>O que dizem nossos clientes</h2>
+    </div>
+
+    <div class="reviews">
+      <article class="review">
+        <div class="review-top">
+          <img class="review-photo" src="assets/img/clientes/cliente-1.jpg" alt="Foto de Jair Bonatto, cliente em Medianeira" width="64" height="64" loading="lazy" decoding="async">
+          <div><strong>Jair Bonatto</strong><small>Residência · Medianeira/PR</small></div>
+        </div>
+        <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+        <q>Minha conta caiu de R$ 620 para a taxa mínima. Instalaram em dois dias e cuidaram de toda a papelada da Copel.</q>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <img class="review-photo" src="assets/img/clientes/cliente-2.jpg" alt="Foto de Marli Scherer, cliente em Missal" width="64" height="64" loading="lazy" decoding="async">
+          <div><strong>Marli Scherer</strong><small>Aviário · Missal/PR</small></div>
+        </div>
+        <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+        <q>Trabalho sério. Entenderam a demanda do aviário e o sistema gera até mais do que foi projetado.</q>
+      </article>
+
+      <article class="review">
+        <div class="review-top">
+          <img class="review-photo" src="assets/img/clientes/cliente-3.jpg" alt="Foto de André Klein, cliente em Foz do Iguaçu" width="64" height="64" loading="lazy" decoding="async">
+          <div><strong>André Klein</strong><small>Comércio · Foz do Iguaçu/PR</small></div>
+        </div>
+        <div class="stars" aria-label="Avaliação 5 de 5">★★★★★</div>
+        <q>Pedi orçamento em três empresas. A M&amp;A foi a única que explicou o cálculo item por item. Recomendo.</q>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIDADES / NAV SEO ============ -->
+<section class="bg-light">
+  <div class="container">
+    <div class="head-center">
+      <span class="eyebrow">Onde atendemos</span>
+      <h2>15 cidades no Oeste do Paraná</h2>
+      <p class="lead">Selecione sua cidade e veja preços, prazos e obras realizadas na sua região.</p>
+    </div>
+
+    <div class="nav-seo">
+      <div class="nav-seo-group">
+        <div class="nav-seo-head"><h3>Cidades atendidas</h3><span>Sede em Medianeira · raio de 120 km</span></div>
+        <div class="links-grid" id="lista-cidades"></div>
+      </div>
+
+      <div class="nav-seo-group">
+        <div class="nav-seo-head"><h3>Serviços</h3><span>Escolha pelo seu perfil de consumo</span></div>
+        <div class="links-grid">
+          <a class="nav-item" href="/energia-solar-residencial-medianeira"><span class="tag">Residencial</span><strong>Energia solar para casas</strong><p>Sistemas de 2 a 15 kWp com economia já na primeira fatura.</p><span class="go">→</span></a>
+          <a class="nav-item" href="/energia-solar-empresa-medianeira"><span class="tag">Empresarial</span><strong>Energia solar para empresas</strong><p>Comércio e indústria com payback de 2 a 4 anos.</p><span class="go">→</span></a>
+          <a class="nav-item" href="/energia-solar-rural-medianeira"><span class="tag">Rural</span><strong>Energia solar no agro</strong><p>Aviários, suinocultura e irrigação com crédito rural.</p><span class="go">→</span></a>
+          <a class="nav-item" href="/projeto-homologacao-solar-medianeira"><span class="tag">Engenharia</span><strong>Projeto e homologação</strong><p>Projeto elétrico com ART e todo o trâmite na Copel.</p><span class="go">→</span></a>
+          <a class="nav-item" href="/financiamento-energia-solar-medianeira"><span class="tag">Crédito</span><strong>Financiamento em até 120x</strong><p>Bancos e cooperativas, com carência de até 6 meses.</p><span class="go">→</span></a>
+          <a class="nav-item is-all" href="/cidades-atendidas"><span class="tag">Tudo</span><strong>Ver todas as cidades e serviços</strong><p>Mapa completo de atendimento da M&amp;A no Oeste do PR.</p><span class="go">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container" style="max-width:920px">
+    <div class="head-center">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas que todo cliente faz</h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa1" id="fq1">Quanto custa um sistema de energia solar em Medianeira?</button>
+        <div class="faq-a" id="fa1" role="region" aria-labelledby="fq1">O investimento depende do consumo mensal. Sistemas residenciais na região partem de aproximadamente R$ 14.000 para consumos de 250 kWh/mês. O orçamento é gratuito e feito após análise da sua conta de luz.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa2" id="fq2">Em quanto tempo o investimento se paga?</button>
+        <div class="faq-a" id="fa2" role="region" aria-labelledby="fq2">No Oeste do Paraná o retorno médio ocorre entre 3 e 5 anos, considerando a alta incidência solar da região e as tarifas da Copel. Depois disso, a energia gerada é praticamente gratuita por mais de 20 anos.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa3" id="fq3">A energia solar funciona em dias nublados?</button>
+        <div class="faq-a" id="fa3" role="region" aria-labelledby="fq3">Sim. A geração cai proporcionalmente à luminosidade, mas o sistema continua produzindo. O dimensionamento já considera a média anual, incluindo dias nublados e chuvosos.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa4" id="fq4">Vocês cuidam da homologação junto à Copel?</button>
+        <div class="faq-a" id="fa4" role="region" aria-labelledby="fq4">Sim. Realizamos o projeto elétrico, o protocolo, o acompanhamento do parecer de acesso e a vistoria final junto à concessionária, sem custo adicional.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa5" id="fq5">Existe financiamento para energia solar?</button>
+        <div class="faq-a" id="fa5" role="region" aria-labelledby="fq5">Sim. Trabalhamos com linhas de crédito de bancos e cooperativas, com prazos de até 120 meses e carência. Em muitos casos a parcela do financiamento é menor que a conta de luz atual.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false" aria-controls="fa6" id="fq6">Qual a vida útil dos painéis solares?</button>
+        <div class="faq-a" id="fa6" role="region" aria-labelledby="fq6">Os módulos têm vida útil superior a 25 anos, com garantia de performance de 25 anos e garantia de produto de 12 a 15 anos, conforme o fabricante. Os inversores têm garantia de 10 a 12 anos.</div>
+      </div>
+    </div>
+
+    <div class="wa-inline center-cta">
+      <a class="btn-wa" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+        <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Tenho outra dúvida
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEXTO SEO + MAPA ============ -->
+<section class="bg-light">
+  <div class="container s-seo">
+    <h2>Energia solar fotovoltaica em Medianeira e no Oeste do Paraná</h2>
+    <p>Medianeira está numa das faixas de maior irradiação solar do sul do Brasil, com média anual em torno de 4,9 a 5,2 kWh/m² por dia. Isso significa que um mesmo sistema instalado aqui gera mais energia do que a maioria das cidades do Sudeste — e por isso o retorno do investimento na região é tão rápido.</p>
+
+    <h3>Como funciona a compensação de energia</h3>
+    <p>Pela Lei 14.300/2022, o excedente que o seu sistema injeta na rede da Copel vira crédito de energia, válido por 60 meses. Na prática, o telhado gera durante o dia, você consome à noite e a fatura fica reduzida à taxa mínima de disponibilidade.</p>
+
+    <h3>Quem mais economiza no Oeste do PR</h3>
+    <ul>
+      <li><strong>Aviários e granjas:</strong> consumo alto e contínuo, com o melhor payback da região.</li>
+      <li><strong>Irrigação e secadores:</strong> demanda concentrada no período diurno, casando com a curva de geração.</li>
+      <li><strong>Comércio e indústria:</strong> redução direta de custo fixo e depreciação acelerada no IR.</li>
+      <li><strong>Residências:</strong> a partir de R$ 400 de conta mensal o investimento já compensa.</li>
+    </ul>
+
+    <h3>Atendimento em toda a região</h3>
+    <p>Além de Medianeira, atendemos <a href="/energia-solar-missal">Missal</a>, <a href="/energia-solar-itaipulandia">Itaipulândia</a>, <a href="/energia-solar-sao-miguel-do-iguacu">São Miguel do Iguaçu</a>, <a href="/energia-solar-santa-helena">Santa Helena</a>, <a href="/energia-solar-matelandia">Matelândia</a>, <a href="/energia-solar-ceu-azul">Céu Azul</a>, <a href="/energia-solar-foz-do-iguacu">Foz do Iguaçu</a>, <a href="/energia-solar-cascavel">Cascavel</a>, <a href="/energia-solar-toledo">Toledo</a> e <a href="/cidades-atendidas">outras cidades</a>.</p>
+
+    <div class="map-frame map-lazy" role="button" tabindex="0"
+         data-src="https://www.google.com/maps?q=Medianeira,PR&z=10&output=embed"
+         aria-label="Carregar mapa da área de atendimento">
+      <span class="map-pin">📍</span>
+      <strong>Nossa área de atendimento</strong>
+      <span>Sede em Medianeira/PR · toque para carregar o mapa interativo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta" id="contato">
+  <div class="container">
+    <span class="eyebrow">Orçamento gratuito</span>
+    <h2>Pare de alugar energia da concessionária</h2>
+    <p>Envie sua conta de luz e receba em até 24 horas o dimensionamento completo, o valor exato do investimento e a projeção de economia dos próximos 25 anos.</p>
+    <a class="btn-wa wa-lg" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+      <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Falar no WhatsApp (45) 99126-2160
+    </a>
+    <span class="wa-hint">M&amp;A Soluções Energéticas · Av. Brasil, 000 · Medianeira/PR · Seg–Sex 08:00–18:00</span>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="site">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <h4>M&amp;A Soluções Energéticas</h4>
+        <p>Projeto, instalação e homologação de sistemas de energia solar fotovoltaica em Medianeira e todo o Oeste do Paraná.</p>
+        <p style="margin-top:16px"><strong style="color:#fff">Horário</strong><br>Seg–Sex 08:00–18:00<br>Sáb 08:00–12:00</p>
+        <a class="btn-wa f-wa" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+          <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Chamar no WhatsApp
+        </a>
+      </div>
+
+      <div>
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="/energia-solar-residencial-medianeira">Residencial</a></li>
+          <li><a href="/energia-solar-empresa-medianeira">Empresarial</a></li>
+          <li><a href="/energia-solar-rural-medianeira">Rural e agronegócio</a></li>
+          <li><a href="/projeto-homologacao-solar-medianeira">Projeto e homologação</a></li>
+          <li><a href="/financiamento-energia-solar-medianeira">Financiamento</a></li>
+          <li><a href="/manutencao-energia-solar-medianeira">Manutenção e limpeza</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Cidades</h4>
+        <ul>
+          <li><a href="/energia-solar-medianeira">Medianeira</a></li>
+          <li><a href="/energia-solar-missal">Missal</a></li>
+          <li><a href="/energia-solar-sao-miguel-do-iguacu">São Miguel do Iguaçu</a></li>
+          <li><a href="/energia-solar-foz-do-iguacu">Foz do Iguaçu</a></li>
+          <li><a href="/energia-solar-cascavel">Cascavel</a></li>
+          <li><a href="/cidades-atendidas"><strong>Ver todas →</strong></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5545991262160">(45) 99126-2160</a></li>
+          <li><a href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:contato@masolucoesenergeticas.com.br">contato@masolucoesenergeticas.com.br</a></li>
+          <li>Av. Brasil, 000 — Medianeira/PR</li>
+          <li><a href="/sobre">Sobre a empresa</a></li>
+          <li><a href="/obras">Obras realizadas</a></li>
+          <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copy">
+      © <span data-ano>2026</span> M&amp;A Soluções Energéticas LTDA · Medianeira/PR · Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BARRA MOBILE ============ -->
+<div class="wa-bar">
+  <a class="btn-wa wa-block" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+    <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Orçamento grátis no WhatsApp
+  </a>
+</div>
+
+<!-- ============ CHAT MAGNUM ============ -->
+<aside class="chat-w" id="chat-magnum" aria-live="polite">
+  <button class="chat-mini" type="button" data-chat-open aria-label="Abrir conversa com a Magnum">
+    <span class="chat-avatar-mini">
+      <img src="assets/img/atendente.jpg" alt="" width="40" height="40" loading="lazy" decoding="async">
+    </span>
+    <span class="chat-mini-txt">
+      <b><svg class="ico-wa ico-mini" aria-hidden="true"><use href="#i-wa"></use></svg>Falar com a Magnum</b>
+      <i>online agora</i>
+    </span>
+  </button>
+
+  <div class="chat-full">
+    <div class="chat-head">
+      <div class="chat-avatar">
+        <img src="assets/img/atendente.jpg" alt="Magnum, atendente da M&amp;A Soluções Energéticas" width="46" height="46" loading="lazy" decoding="async"
+             onerror="this.outerHTML='<span class=&quot;fallback&quot;>M</span>'">
+      </div>
+      <div class="chat-id">
+        <strong>Magnum · M&amp;A Solar</strong>
+        <span>Online · responde em minutos</span>
+      </div>
+      <button class="chat-x" type="button" data-chat-min aria-label="Minimizar conversa">×</button>
+    </div>
+
+    <div class="chat-body">
+      <div class="chat-typing" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <div class="chat-msg" data-msg="1">
+        Olá! 👋 Sou a Magnum, da M&amp;A Soluções Energéticas.
+        <span class="chat-time" data-chat-time></span>
+      </div>
+      <div class="chat-msg" data-msg="2">
+        Me manda uma foto da sua <strong>conta de luz</strong> que eu calculo quanto você economizaria com energia solar — é grátis e sem compromisso.
+        <span class="chat-time" data-chat-time></span>
+      </div>
+
+      <a class="btn-wa" href="https://wa.me/5545991262160" data-wa target="_blank" rel="noopener">
+        <svg class="ico-wa" aria-hidden="true"><use href="#i-wa"></use></svg> Responder à Magnum
+      </a>
+      <span class="chat-foot">Conversa direta no WhatsApp · (45) 99126-2160</span>
+    </div>
+  </div>
+</aside>
+
+<script src="assets/js/content.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
