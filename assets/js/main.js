@@ -121,7 +121,7 @@
   }
 
   /* ===== Formulario -> WhatsApp ===== */
-  var WPP = '5545999999999'; /* somente numeros, com 55 */
+  var WPP = '5545991262160'; /* somente numeros, com 55 */
 
   var form = $('#form');
   if (!form) return;
