@@ -214,3 +214,28 @@ button,input,select,textarea{font:inherit;color:inherit}
 .field.is-err select,
 .field.is-err textarea{border-color:#d64545;background:#fff6f6}
 .field .err{display:block;min-height:1em;color:#d64545;font-size:.76rem;margin-top:4px}
+.skip-link{position:absolute;left:-9999px;top:10px;z-index:999}
+.skip-link:focus{left:10px}
+.logo-sub{font-weight:500;color:var(--ink-3)}
+.btn-sm{padding:11px 22px}
+.btn-block{width:100%;margin-top:16px}
+.sec-tight{padding-top:0;margin-top:-40px}
+.mb-lg{margin-bottom:44px}
+.items-center{align-items:center}
+.center-x{justify-content:center}
+.reset-list{list-style:none;padding:0;margin:0}
+.sm{font-size:.94rem}
+.xs{font-size:.84rem}
+.muted{color:var(--ink-3)}
+.h3{font-size:1.2rem;font-weight:800;margin-top:20px}
+.eyebrow--on-dark{background:rgba(245,158,11,.2);color:var(--brand)}
+.ft-h{font-size:1rem;font-weight:700;margin-bottom:12px}
+
+.hero-card-img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r)}
+.card--img{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card--img>img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.card--img .card-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.card--img .card-body>.btn{margin-top:auto;align-self:flex-start}
+.card--img .check{margin:14px 0 18px}
+.gal figure{margin:0}
+.gal img{width:100%;height:auto;display:block;border-radius:var(--r)}
